@@ -1,0 +1,1 @@
+Cygwin not found at: C:\Users\danie\AppData\Local\SageMath 9.0\runtime Configure Disable profile

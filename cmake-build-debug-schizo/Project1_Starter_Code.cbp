@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Project1_Starter_Code"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j20 -f &quot;/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j20 -f &quot;/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j20 -f &quot;/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j20 -f &quot;/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j20 -f &quot;/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j20 -f &quot;/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j20 -f &quot;/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j20 -f &quot;/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j20 -f &quot;/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j20 -f &quot;/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j20 -f &quot;/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j20 -f &quot;/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Project1_Starter_Code">
+				<Option output="/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo/Project1_Starter_Code" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir=""/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/users/guest/d/dcy2016/project-1/."/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j20 -f &quot;/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 Project1_Starter_Code"/>
+					<CompileFile command="/usr/bin/make -j20 -f &quot;/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j20 -f &quot;/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j20 -f &quot;/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Project1_Starter_Code/fast">
+				<Option output="/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo/Project1_Starter_Code" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir=""/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/users/guest/d/dcy2016/project-1/."/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j20 -f &quot;/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 Project1_Starter_Code/fast"/>
+					<CompileFile command="/usr/bin/make -j20 -f &quot;/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j20 -f &quot;/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j20 -f &quot;/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/users/guest/d/dcy2016/project-1/AddAutomaton.cpp">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/AddAutomaton.h">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/Automaton.h">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/ColonAutomaton.cpp">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/ColonAutomaton.h">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/ColonDashAutomaton.cpp">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/ColonDashAutomaton.h">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/CommaAutomaton.cpp">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/CommaAutomaton.h">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/CommentAutomaton.cpp">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/CommentAutomaton.h">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/FactsAutomaton.cpp">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/FactsAutomaton.h">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/IDAutomaton.cpp">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/IDAutomaton.h">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/LeftParenAutomaton.cpp">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/LeftParenAutomaton.h">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/Lexer.cpp">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/Lexer.h">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/MultiplyAutomaton.cpp">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/MultiplyAutomaton.h">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/PeriodAutomaton.cpp">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/PeriodAutomaton.h">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/QMarkAutomaton.cpp">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/QMarkAutomaton.h">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/QueriesAutomaton.cpp">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/QueriesAutomaton.h">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/RightParenAutomaton.cpp">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/RightParenAutomaton.h">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/RulesAutomaton.cpp">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/RulesAutomaton.h">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/SchemesAutomaton.cpp">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/SchemesAutomaton.h">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/StringAutomaton.cpp">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/StringAutomaton.h">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/Token.cpp">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/Token.h">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/UndefinedCommentAutomaton.cpp">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/UndefinedCommentAutomaton.h">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/UndefinedStringAutomaton.cpp">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/UndefinedStringAutomaton.h">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/main.cpp">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

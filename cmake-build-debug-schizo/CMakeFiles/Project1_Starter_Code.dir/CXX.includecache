@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/users/guest/d/dcy2016/project-1/Token.cpp
+Token.h
+/users/guest/d/dcy2016/project-1/Token.h
+sstream
+-
+
+/users/guest/d/dcy2016/project-1/Token.h
+string
+-
+iostream
+-
+
