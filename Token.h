@@ -40,6 +40,9 @@ public:
     //implement get functions for each variable and a toString function
     std::string toString();
     static std::string tokenTypeToString(TokenType type);
+    std::string getDescription();
+    TokenType getType();
+    int getLine();
     // TODO: add other needed methods
 };
 

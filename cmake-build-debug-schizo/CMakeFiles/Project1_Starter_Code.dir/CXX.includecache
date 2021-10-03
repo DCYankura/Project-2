@@ -6,15 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/users/guest/d/dcy2016/project-1/Token.cpp
+/users/guest/d/dcy2016/project-1/Automaton.h
+utility
+-
 Token.h
 /users/guest/d/dcy2016/project-1/Token.h
-sstream
--
 
 /users/guest/d/dcy2016/project-1/Token.h
 string
 -
 iostream
 -
+
+/users/guest/d/dcy2016/project-1/UndefinedCommentAutomaton.cpp
+UndefinedCommentAutomaton.h
+/users/guest/d/dcy2016/project-1/UndefinedCommentAutomaton.h
+
+/users/guest/d/dcy2016/project-1/UndefinedCommentAutomaton.h
+Automaton.h
+/users/guest/d/dcy2016/project-1/Automaton.h
 

@@ -113,7 +113,7 @@ void Lexer::Run(std::string& input) {
     }
     auto* newToken = new Token(TokenType::ENDOFFILE,"",lineNumber);
     tokens.push_back(newToken);
-    Lexer::Print();
+    //Lexer::Print();
 
     /*
     set lineNumber to 1
@@ -152,4 +152,8 @@ void Lexer::Run(std::string& input) {
     }
     add end of file token to all tokens
     */
+}
+
+std::vector<Token*> Lexer::ReturnTokens() {
+    return tokens;
 }

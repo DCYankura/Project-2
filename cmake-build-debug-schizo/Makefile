@@ -199,6 +199,21 @@ CommentAutomaton.s:
 .PHONY : CommentAutomaton.s
 
 # target to build an object file
+DatalogProgram.o:
+	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/DatalogProgram.o
+.PHONY : DatalogProgram.o
+
+# target to preprocess a source file
+DatalogProgram.i:
+	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/DatalogProgram.i
+.PHONY : DatalogProgram.i
+
+# target to generate assembly for a file
+DatalogProgram.s:
+	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/DatalogProgram.s
+.PHONY : DatalogProgram.s
+
+# target to build an object file
 FactsAutomaton.o:
 	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/FactsAutomaton.o
 .PHONY : FactsAutomaton.o
@@ -289,6 +304,21 @@ PeriodAutomaton.s:
 .PHONY : PeriodAutomaton.s
 
 # target to build an object file
+Predicate.o:
+	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/Predicate.o
+.PHONY : Predicate.o
+
+# target to preprocess a source file
+Predicate.i:
+	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/Predicate.i
+.PHONY : Predicate.i
+
+# target to generate assembly for a file
+Predicate.s:
+	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/Predicate.s
+.PHONY : Predicate.s
+
+# target to build an object file
 QMarkAutomaton.o:
 	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/QMarkAutomaton.o
 .PHONY : QMarkAutomaton.o
@@ -332,6 +362,21 @@ RightParenAutomaton.i:
 RightParenAutomaton.s:
 	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/RightParenAutomaton.s
 .PHONY : RightParenAutomaton.s
+
+# target to build an object file
+Rule.o:
+	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/Rule.o
+.PHONY : Rule.o
+
+# target to preprocess a source file
+Rule.i:
+	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/Rule.i
+.PHONY : Rule.i
+
+# target to generate assembly for a file
+Rule.s:
+	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/Rule.s
+.PHONY : Rule.s
 
 # target to build an object file
 RulesAutomaton.o:
@@ -462,6 +507,9 @@ help:
 	@echo "... CommentAutomaton.o"
 	@echo "... CommentAutomaton.i"
 	@echo "... CommentAutomaton.s"
+	@echo "... DatalogProgram.o"
+	@echo "... DatalogProgram.i"
+	@echo "... DatalogProgram.s"
 	@echo "... FactsAutomaton.o"
 	@echo "... FactsAutomaton.i"
 	@echo "... FactsAutomaton.s"
@@ -480,6 +528,9 @@ help:
 	@echo "... PeriodAutomaton.o"
 	@echo "... PeriodAutomaton.i"
 	@echo "... PeriodAutomaton.s"
+	@echo "... Predicate.o"
+	@echo "... Predicate.i"
+	@echo "... Predicate.s"
 	@echo "... QMarkAutomaton.o"
 	@echo "... QMarkAutomaton.i"
 	@echo "... QMarkAutomaton.s"
@@ -489,6 +540,9 @@ help:
 	@echo "... RightParenAutomaton.o"
 	@echo "... RightParenAutomaton.i"
 	@echo "... RightParenAutomaton.s"
+	@echo "... Rule.o"
+	@echo "... Rule.i"
+	@echo "... Rule.s"
 	@echo "... RulesAutomaton.o"
 	@echo "... RulesAutomaton.i"
 	@echo "... RulesAutomaton.s"

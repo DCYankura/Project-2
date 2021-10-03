@@ -242,6 +242,12 @@ Project1_Starter_Code_BINARY_DIR:STATIC=/users/guest/d/dcy2016/project-1/cmake-b
 //Value Computed by CMake
 Project1_Starter_Code_SOURCE_DIR:STATIC=/users/guest/d/dcy2016/project-1
 
+//Value Computed by CMake
+Project_BINARY_DIR:STATIC=/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo
+
+//Value Computed by CMake
+Project_SOURCE_DIR:STATIC=/users/guest/d/dcy2016/project-1
+
 
 ########################
 # INTERNAL cache entries

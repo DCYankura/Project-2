@@ -38,3 +38,12 @@ std::string Token::toString() {
     ss << "(" << typeName << ",\"" << description << "\"," << line << ")"<< std::endl;
     return ss.str();
 }
+std::string Token::getDescription() {
+    return description;
+}
+TokenType Token::getType(){
+    return type;
+}
+int Token::getLine(){
+    return line;
+}

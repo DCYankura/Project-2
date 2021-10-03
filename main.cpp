@@ -2,6 +2,7 @@
 //#include <string>
 #include <fstream>
 #include "Lexer.h"
+#include "Parser.h"
 //#include "Automaton.h"
 //#include "Token.h"
 
@@ -10,6 +11,7 @@ using namespace std;
 int main(__attribute__((unused)) int argc, char** argv) {
 
     auto* lexer = new Lexer();
+    auto* parser = new Parser();
 
     // TODO
     //open file and use ifsteam.get() to parse through it
@@ -20,6 +22,8 @@ int main(__attribute__((unused)) int argc, char** argv) {
                  (std::istreambuf_iterator<char>()) );
 
     lexer->Run(input);
+    std::vector<Token*> tokens = lexer->ReturnTokens();
+    parser->parse(tokens);
     delete lexer;
 
     return 0;

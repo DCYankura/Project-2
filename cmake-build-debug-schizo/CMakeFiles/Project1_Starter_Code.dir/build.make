@@ -330,6 +330,45 @@ CMakeFiles/Project1_Starter_Code.dir/UndefinedCommentAutomaton.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project1_Starter_Code.dir/UndefinedCommentAutomaton.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/d/dcy2016/project-1/UndefinedCommentAutomaton.cpp -o CMakeFiles/Project1_Starter_Code.dir/UndefinedCommentAutomaton.s
 
+CMakeFiles/Project1_Starter_Code.dir/DatalogProgram.o: CMakeFiles/Project1_Starter_Code.dir/flags.make
+CMakeFiles/Project1_Starter_Code.dir/DatalogProgram.o: ../DatalogProgram.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/Project1_Starter_Code.dir/DatalogProgram.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project1_Starter_Code.dir/DatalogProgram.o -c /users/guest/d/dcy2016/project-1/DatalogProgram.cpp
+
+CMakeFiles/Project1_Starter_Code.dir/DatalogProgram.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project1_Starter_Code.dir/DatalogProgram.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/d/dcy2016/project-1/DatalogProgram.cpp > CMakeFiles/Project1_Starter_Code.dir/DatalogProgram.i
+
+CMakeFiles/Project1_Starter_Code.dir/DatalogProgram.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project1_Starter_Code.dir/DatalogProgram.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/d/dcy2016/project-1/DatalogProgram.cpp -o CMakeFiles/Project1_Starter_Code.dir/DatalogProgram.s
+
+CMakeFiles/Project1_Starter_Code.dir/Rule.o: CMakeFiles/Project1_Starter_Code.dir/flags.make
+CMakeFiles/Project1_Starter_Code.dir/Rule.o: ../Rule.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/Project1_Starter_Code.dir/Rule.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project1_Starter_Code.dir/Rule.o -c /users/guest/d/dcy2016/project-1/Rule.cpp
+
+CMakeFiles/Project1_Starter_Code.dir/Rule.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project1_Starter_Code.dir/Rule.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/d/dcy2016/project-1/Rule.cpp > CMakeFiles/Project1_Starter_Code.dir/Rule.i
+
+CMakeFiles/Project1_Starter_Code.dir/Rule.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project1_Starter_Code.dir/Rule.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/d/dcy2016/project-1/Rule.cpp -o CMakeFiles/Project1_Starter_Code.dir/Rule.s
+
+CMakeFiles/Project1_Starter_Code.dir/Predicate.o: CMakeFiles/Project1_Starter_Code.dir/flags.make
+CMakeFiles/Project1_Starter_Code.dir/Predicate.o: ../Predicate.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/Project1_Starter_Code.dir/Predicate.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project1_Starter_Code.dir/Predicate.o -c /users/guest/d/dcy2016/project-1/Predicate.cpp
+
+CMakeFiles/Project1_Starter_Code.dir/Predicate.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project1_Starter_Code.dir/Predicate.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/d/dcy2016/project-1/Predicate.cpp > CMakeFiles/Project1_Starter_Code.dir/Predicate.i
+
+CMakeFiles/Project1_Starter_Code.dir/Predicate.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project1_Starter_Code.dir/Predicate.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/d/dcy2016/project-1/Predicate.cpp -o CMakeFiles/Project1_Starter_Code.dir/Predicate.s
+
 # Object files for target Project1_Starter_Code
 Project1_Starter_Code_OBJECTS = \
 "CMakeFiles/Project1_Starter_Code.dir/ColonAutomaton.o" \
@@ -352,7 +391,10 @@ Project1_Starter_Code_OBJECTS = \
 "CMakeFiles/Project1_Starter_Code.dir/CommentAutomaton.o" \
 "CMakeFiles/Project1_Starter_Code.dir/StringAutomaton.o" \
 "CMakeFiles/Project1_Starter_Code.dir/UndefinedStringAutomaton.o" \
-"CMakeFiles/Project1_Starter_Code.dir/UndefinedCommentAutomaton.o"
+"CMakeFiles/Project1_Starter_Code.dir/UndefinedCommentAutomaton.o" \
+"CMakeFiles/Project1_Starter_Code.dir/DatalogProgram.o" \
+"CMakeFiles/Project1_Starter_Code.dir/Rule.o" \
+"CMakeFiles/Project1_Starter_Code.dir/Predicate.o"
 
 # External object files for target Project1_Starter_Code
 Project1_Starter_Code_EXTERNAL_OBJECTS =
@@ -378,9 +420,12 @@ Project1_Starter_Code: CMakeFiles/Project1_Starter_Code.dir/CommentAutomaton.o
 Project1_Starter_Code: CMakeFiles/Project1_Starter_Code.dir/StringAutomaton.o
 Project1_Starter_Code: CMakeFiles/Project1_Starter_Code.dir/UndefinedStringAutomaton.o
 Project1_Starter_Code: CMakeFiles/Project1_Starter_Code.dir/UndefinedCommentAutomaton.o
+Project1_Starter_Code: CMakeFiles/Project1_Starter_Code.dir/DatalogProgram.o
+Project1_Starter_Code: CMakeFiles/Project1_Starter_Code.dir/Rule.o
+Project1_Starter_Code: CMakeFiles/Project1_Starter_Code.dir/Predicate.o
 Project1_Starter_Code: CMakeFiles/Project1_Starter_Code.dir/build.make
 Project1_Starter_Code: CMakeFiles/Project1_Starter_Code.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Linking CXX executable Project1_Starter_Code"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Linking CXX executable Project1_Starter_Code"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Project1_Starter_Code.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

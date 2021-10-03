@@ -117,6 +117,12 @@
 		<Unit filename="/users/guest/d/dcy2016/project-1/CommentAutomaton.h">
 			<Option target="Project1_Starter_Code"/>
 		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/DatalogProgram.cpp">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/DatalogProgram.h">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
 		<Unit filename="/users/guest/d/dcy2016/project-1/FactsAutomaton.cpp">
 			<Option target="Project1_Starter_Code"/>
 		</Unit>
@@ -153,6 +159,12 @@
 		<Unit filename="/users/guest/d/dcy2016/project-1/PeriodAutomaton.h">
 			<Option target="Project1_Starter_Code"/>
 		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/Predicate.cpp">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/Predicate.h">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
 		<Unit filename="/users/guest/d/dcy2016/project-1/QMarkAutomaton.cpp">
 			<Option target="Project1_Starter_Code"/>
 		</Unit>
@@ -169,6 +181,12 @@
 			<Option target="Project1_Starter_Code"/>
 		</Unit>
 		<Unit filename="/users/guest/d/dcy2016/project-1/RightParenAutomaton.h">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/Rule.cpp">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/Rule.h">
 			<Option target="Project1_Starter_Code"/>
 		</Unit>
 		<Unit filename="/users/guest/d/dcy2016/project-1/RulesAutomaton.cpp">
