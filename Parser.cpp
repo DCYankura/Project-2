@@ -7,8 +7,8 @@
 //objects for each class
 void Parser::parse(std::vector<Token*> tokens) {
     try {
-        auto* datalog = new DatalogProgram();
-        datalog = parseDatalogProgram(tokens);
+        //auto* datalog = new DatalogProgram();
+        DatalogProgram* datalog = parseDatalogProgram(tokens);
         std::cout << "Success!" << std::endl;
         datalog->OneToStringToRuleThemAll();
     }
@@ -17,13 +17,14 @@ void Parser::parse(std::vector<Token*> tokens) {
         std::cout << '\t' << "(" << t->tokenTypeToString(t->getType()) << ",\"" << t->getDescription() << "\"," << t->getLine() << ")";
     }
 }
+
 DatalogProgram*  Parser::parseDatalogProgram(std::vector<Token*> tokens){
     index = 0;
-    auto* scheme = new Predicate();
+    //auto* scheme = new Predicate();
     std::vector<Predicate*> schemeVector;
     //auto* fact = new Predicate();
     std::vector<Predicate*> factVector;
-    auto* query = new Predicate();
+    //auto* query = new Predicate();
     std::vector<Predicate*> queryVector;
     //auto* rule = new Rule();
     std::vector<Rule*> ruleVector;
@@ -31,7 +32,7 @@ DatalogProgram*  Parser::parseDatalogProgram(std::vector<Token*> tokens){
     checkForComment(tokens);
     match(TokenType::SCHEMES,tokens);
     match(TokenType::COLON,tokens);
-    scheme = parseScheme(tokens);
+    Predicate* scheme = parseScheme(tokens);
     schemeVector = parseSchemeList(tokens);
     schemeVector.insert(schemeVector.begin(),scheme);
     match(TokenType::FACTS,tokens);
@@ -42,7 +43,7 @@ DatalogProgram*  Parser::parseDatalogProgram(std::vector<Token*> tokens){
     ruleVector = parseRuleList(tokens);
     match(TokenType::QUERIES,tokens);
     match(TokenType::COLON,tokens);
-    query = parseQuery(tokens);
+    Predicate* query = parseQuery(tokens);
     queryVector = parseQueryList(tokens);
     queryVector.push_back(query);
     match(TokenType::ENDOFFILE,tokens);
@@ -61,6 +62,7 @@ DatalogProgram*  Parser::parseDatalogProgram(std::vector<Token*> tokens){
     }
     return datalog;
 }
+
 std::vector<Predicate*> Parser::parseSchemeList(std::vector<Token*> tokens){
     checkForComment(tokens);
     std::vector<Predicate*> tempList;
@@ -78,6 +80,7 @@ std::vector<Predicate*> Parser::parseSchemeList(std::vector<Token*> tokens){
     schemeList.clear();
     return tempList;
 }
+
 std::vector<Predicate*> Parser::parseFactList(std::vector<Token*> tokens){
     checkForComment(tokens);
     std::vector<Predicate*> tempList;
@@ -95,6 +98,7 @@ std::vector<Predicate*> Parser::parseFactList(std::vector<Token*> tokens){
     factList.clear();
     return tempList;
 }
+
 std::vector<Rule*> Parser::parseRuleList(std::vector<Token*> tokens){
     checkForComment(tokens);
     std::vector<Rule*> tempList;
@@ -112,6 +116,7 @@ std::vector<Rule*> Parser::parseRuleList(std::vector<Token*> tokens){
     ruleList.clear();
     return tempList;
 }
+
 std::vector<Predicate*> Parser::parseQueryList(std::vector<Token*> tokens){
     checkForComment(tokens);
     std::vector<Predicate*> tempList;
@@ -129,6 +134,7 @@ std::vector<Predicate*> Parser::parseQueryList(std::vector<Token*> tokens){
     queryList.clear();
     return tempList;
 }
+
 Predicate* Parser::parseScheme(std::vector<Token*> tokens){
     //create predicate object for scheme
     std::vector<Parameter*> schemeList;
@@ -145,6 +151,7 @@ Predicate* Parser::parseScheme(std::vector<Token*> tokens){
     return scheme;
 
 }
+
 Predicate* Parser::parseFact(std::vector<Token*> tokens){
     checkForComment(tokens);
     std::vector<Parameter*> factList;
@@ -160,14 +167,15 @@ Predicate* Parser::parseFact(std::vector<Token*> tokens){
     auto* fact = new Predicate(ID, factList);
     return fact;
 }
+
 Rule* Parser::parseRule(std::vector<Token*> tokens){
     //create rule object
-    auto* headPredicate = new Predicate();
+    //auto* headPredicate = new Predicate();
     auto* predicate = new Predicate();
     std::vector<Predicate*> predicateList;
     checkForComment(tokens);
     std::vector<Rule*> ruleList;
-    headPredicate = parseHeadPredicate(tokens);
+    Predicate* headPredicate = parseHeadPredicate(tokens);
     match(TokenType::COLON_DASH,tokens);
     predicate = parsePredicate(tokens);
     predicateList = parsePredicateList(tokens);
@@ -177,6 +185,7 @@ Rule* Parser::parseRule(std::vector<Token*> tokens){
     return rule;
     //push rule object onto rule vector
 }
+
 Predicate* Parser::parseQuery(std::vector<Token*> tokens){
     auto* predicate = new Predicate();
     checkForComment(tokens);
@@ -184,6 +193,7 @@ Predicate* Parser::parseQuery(std::vector<Token*> tokens){
     match(TokenType::Q_MARK,tokens);
     return predicate;
 }
+
 Predicate* Parser::parseHeadPredicate(std::vector<Token*> tokens){
     std::string ID;
     std::string ID2;
@@ -199,6 +209,7 @@ Predicate* Parser::parseHeadPredicate(std::vector<Token*> tokens){
     auto* predicate = new Predicate(ID, parameterList);
     return predicate;
 }
+
 Predicate* Parser::parsePredicate(std::vector<Token*> tokens){
     std::string ID;
     std::vector<Parameter*> parameterList;
@@ -213,6 +224,7 @@ Predicate* Parser::parsePredicate(std::vector<Token*> tokens){
     auto* predicate = new Predicate(ID, parameterList);
     return predicate;
 }
+
 std::vector<Predicate*> Parser::parsePredicateList(std::vector<Token*> tokens){
     checkForComment(tokens);
     std::vector<Predicate*> tempList;
@@ -231,6 +243,7 @@ std::vector<Predicate*> Parser::parsePredicateList(std::vector<Token*> tokens){
     predicateList.clear();
     return tempList;
 }
+
 std::vector<Parameter*> Parser::parseParameterList(std::vector<Token*> tokens){
     checkForComment(tokens);
     std::vector<Parameter*> tempList;
@@ -249,6 +262,7 @@ std::vector<Parameter*> Parser::parseParameterList(std::vector<Token*> tokens){
     parseParameterVector.clear();
     return tempList;
 }
+
 std::vector<Parameter*> Parser::parseStringList(std::vector<Token*> tokens){
     checkForComment(tokens);
     std::vector<Parameter*> tempList;
@@ -268,6 +282,7 @@ std::vector<Parameter*> Parser::parseStringList(std::vector<Token*> tokens){
     stringListVector.clear();
     return tempList;
 }
+
 std::vector<Parameter*> Parser::parseIdList(std::vector<Token*> tokens){
     checkForComment(tokens);
     std::vector<Parameter*> tempList;
@@ -287,6 +302,7 @@ std::vector<Parameter*> Parser::parseIdList(std::vector<Token*> tokens){
     IDListVector.clear();
     return tempList;
 }
+
 Parameter* Parser::parseParameter(std::vector<Token*> tokens){
     checkForComment(tokens);
     std::string STRING;
@@ -300,6 +316,7 @@ Parameter* Parser::parseParameter(std::vector<Token*> tokens){
     return parameter;
     //return after making it not void
 }
+
 std::string Parser::match(TokenType type, std::vector<Token*> tokens) {
     checkForComment(tokens);
     auto* t = tokens.at(index);
@@ -315,6 +332,7 @@ std::string Parser::match(TokenType type, std::vector<Token*> tokens) {
         throw t;
     }
 }
+
 void Parser::checkForComment(std::vector<Token*> tokens){
     if(tokens.at(index)->getType() == TokenType::COMMENT){
         index++;

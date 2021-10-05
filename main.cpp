@@ -1,10 +1,7 @@
 #include <iostream>
-//#include <string>
 #include <fstream>
 #include "Lexer.h"
 #include "Parser.h"
-//#include "Automaton.h"
-//#include "Token.h"
 
 using namespace std;
 

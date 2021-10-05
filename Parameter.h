@@ -10,7 +10,7 @@ class Parameter {
 private:
     std::string parameterString;
 public:
-    Parameter(std::string STRING);
+    Parameter(std::string parameterString);
     Parameter() {}
     //virtual ~Parameter() = default;
     std::string parameterToSting();

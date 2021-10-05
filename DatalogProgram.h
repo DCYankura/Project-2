@@ -10,7 +10,6 @@
 #include <set>
 #include "Predicate.h"
 #include "Rule.h"
-#include "Parameter.h"
 
 class DatalogProgram
 {
@@ -42,15 +41,19 @@ public:
     void addScheme(Predicate* predicate){
         schemes.push_back(predicate);
     }
+
     void addFacts(Predicate* predicate){
         facts.push_back(predicate);
     }
+
     void addQueries(Predicate* predicate){
         queries.push_back(predicate);
     }
+
     void addRules(Rule* rule){
         rules.push_back(rule);
     }
+
     void OneToStringToRuleThemAll();
     void creatDomain();
 };
