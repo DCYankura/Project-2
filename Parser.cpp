@@ -45,7 +45,7 @@ DatalogProgram*  Parser::parseDatalogProgram(std::vector<Token*> tokens){
     match(TokenType::COLON,tokens);
     Predicate* query = parseQuery(tokens);
     queryVector = parseQueryList(tokens);
-    queryVector.push_back(query);
+    queryVector.insert(queryVector.begin(),query);
     match(TokenType::ENDOFFILE,tokens);
     for(unsigned int i = 0; i < schemeVector.size(); i++){
         //auto* temp = new Predicate(schemeVector(i));
@@ -220,6 +220,7 @@ Predicate* Parser::parsePredicate(std::vector<Token*> tokens){
     parameter = parseParameter(tokens);
     parameterList = parseParameterList(tokens);
     parameterList.insert(parameterList.begin(),parameter);
+    //parameterList.push_back(parameter);
     match(TokenType::RIGHT_PAREN,tokens);
     auto* predicate = new Predicate(ID, parameterList);
     return predicate;

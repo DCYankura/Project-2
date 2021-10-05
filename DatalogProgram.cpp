@@ -6,7 +6,7 @@ void DatalogProgram::OneToStringToRuleThemAll(){
     for(unsigned int i = 0; i < schemes.size(); i++){
         std::cout << ' ' << ' ';
         schemes[i]->predicateToString();
-        std::cout << "." << std::endl;
+        std::cout << std::endl;
     }
     std::cout << "Facts(" << facts.size() << "):" << std::endl;
     for(unsigned int i = 0; i < facts.size(); i++){
