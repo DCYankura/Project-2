@@ -1,7 +1,7 @@
 #include "Predicate.h"
 void Predicate::predicateToString() {
     std::cout << ID << "(";
-    for(int i = 0; i < parameters.size(); i++){
+    for(unsigned int i = 0; i < parameters.size(); i++){
         std::string parameterString = parameters[i]->parameterToSting();
         if(i == parameters.size() - 1){
             std::cout << parameterString;
@@ -14,7 +14,7 @@ void Predicate::predicateToString() {
 }
 std::vector<std::string> Predicate::getFactStrings() {
     std::vector<std::string> temp;
-    for(int i = 0; i < parameters.size(); i++){
+    for(unsigned int i = 0; i < parameters.size(); i++){
         std::string parameterString = parameters[i]->parameterToSting();
         temp.push_back(parameterString);
     }

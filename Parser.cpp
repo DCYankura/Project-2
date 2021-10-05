@@ -47,17 +47,17 @@ DatalogProgram*  Parser::parseDatalogProgram(std::vector<Token*> tokens){
     queryVector = parseQueryList(tokens);
     queryVector.push_back(query);
     match(TokenType::ENDOFFILE,tokens);
-    for(int i = 0; i < schemeVector.size(); i++){
+    for(unsigned int i = 0; i < schemeVector.size(); i++){
         //auto* temp = new Predicate(schemeVector(i));
         datalog->addScheme(schemeVector[i]);
     }
-    for(int i = 0; i < factVector.size(); i++){
+    for(unsigned int i = 0; i < factVector.size(); i++){
         datalog->addFacts(factVector[i]);
     }
-    for(int i = 0; i < ruleVector.size(); i++){
+    for(unsigned int i = 0; i < ruleVector.size(); i++){
         datalog->addRules(ruleVector[i]);
     }
-    for(int i = 0; i < queryVector.size(); i++){
+    for(unsigned int i = 0; i < queryVector.size(); i++){
         datalog->addQueries(queryVector[i]);
     }
     return datalog;
@@ -71,7 +71,7 @@ std::vector<Predicate*> Parser::parseSchemeList(std::vector<Token*> tokens){
         predicate = parseScheme(tokens);
         schemeList.push_back(predicate);
         tempList = parseSchemeList(tokens);
-        for(int i = 0; i < tempList.size(); i++){
+        for(unsigned int i = 0; i < tempList.size(); i++){
             schemeList.push_back(tempList[i]);
         }
     }
@@ -89,7 +89,7 @@ std::vector<Predicate*> Parser::parseFactList(std::vector<Token*> tokens){
         predicate = parseFact(tokens);
         factList.push_back(predicate);
         tempList = parseFactList(tokens);
-        for(int i = 0; i < tempList.size(); i++){
+        for(unsigned int i = 0; i < tempList.size(); i++){
             factList.push_back(tempList[i]);
         }
     }
@@ -107,7 +107,7 @@ std::vector<Rule*> Parser::parseRuleList(std::vector<Token*> tokens){
         rule = parseRule(tokens);
         ruleList.push_back(rule);
         tempList = parseRuleList(tokens);
-        for(int i = 0; i < tempList.size(); i++){
+        for(unsigned int i = 0; i < tempList.size(); i++){
             ruleList.push_back(tempList[i]);
         }
     }
@@ -125,7 +125,7 @@ std::vector<Predicate*> Parser::parseQueryList(std::vector<Token*> tokens){
         predicate = parseQuery(tokens);
         queryList.push_back(predicate);
         tempList = parseQueryList(tokens);
-        for(int i = 0; i < tempList.size(); i++){
+        for(unsigned int i = 0; i < tempList.size(); i++){
             queryList.push_back(tempList[i]);
         }
     }
@@ -234,7 +234,7 @@ std::vector<Predicate*> Parser::parsePredicateList(std::vector<Token*> tokens){
         predicate = parsePredicate(tokens);
         predicateList.push_back(predicate);
         tempList = parsePredicateList(tokens);
-        for(int i = 0; i < tempList.size(); i++){
+        for(unsigned int i = 0; i < tempList.size(); i++){
             predicateList.push_back(tempList[i]);
         }
     }
@@ -253,7 +253,7 @@ std::vector<Parameter*> Parser::parseParameterList(std::vector<Token*> tokens){
         parameter = parseParameter(tokens);
         parseParameterVector.push_back(parameter);
         tempList = parseParameterList(tokens);
-        for(int i = 0; i < tempList.size(); i++){
+        for(unsigned int i = 0; i < tempList.size(); i++){
             parseParameterVector.push_back(tempList[i]);
         }
     }
@@ -273,7 +273,7 @@ std::vector<Parameter*> Parser::parseStringList(std::vector<Token*> tokens){
         auto* newParameter = new Parameter(tempString);
         stringListVector.push_back(newParameter);
         tempList = parseStringList(tokens);
-        for(int i = 0; i < tempList.size(); i++){
+        for(unsigned int i = 0; i < tempList.size(); i++){
             stringListVector.push_back(tempList[i]);
         }
     }
@@ -293,7 +293,7 @@ std::vector<Parameter*> Parser::parseIdList(std::vector<Token*> tokens){
         auto* newParameter = new Parameter(IDString);
         IDListVector.push_back(newParameter);
         tempList = parseIdList(tokens);
-        for(int i = 0; i < tempList.size(); i++){
+        for(unsigned int i = 0; i < tempList.size(); i++){
             IDListVector.push_back(tempList[i]);
         }
     }
@@ -320,8 +320,6 @@ Parameter* Parser::parseParameter(std::vector<Token*> tokens){
 std::string Parser::match(TokenType type, std::vector<Token*> tokens) {
     checkForComment(tokens);
     auto* t = tokens.at(index);
-    TokenType test = t->getType();
-    TokenType test2 = type;
     std::string test3 = t->getDescription();
     if (t->getType() == type) {
         index++;
