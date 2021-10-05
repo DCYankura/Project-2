@@ -4,25 +4,25 @@ void DatalogProgram::OneToStringToRuleThemAll(){
     //std::cout << "in datalog toString" << std::endl;
     std::cout << "Schemes(" << schemes.size() << "):" << std::endl;
     for(unsigned int i = 0; i < schemes.size(); i++){
-        std::cout << '\t';
+        std::cout << ' ' << ' ';
         schemes[i]->predicateToString();
         std::cout << "." << std::endl;
     }
     std::cout << "Facts(" << facts.size() << "):" << std::endl;
     for(unsigned int i = 0; i < facts.size(); i++){
-        std::cout << '\t';
+        std::cout << ' ' << ' ';
         facts[i]->predicateToString();
         std::cout << "." << std::endl;
     }
     std::cout << "Rules(" << rules.size() << "):" << std::endl;
-    std::cout << '\t';
+    std::cout << ' ' << ' ';
     for(unsigned int i = 0; i < rules.size(); i++){
         rules[i]->ruleToString();
         std::cout << "." << std::endl;
     }
     std::cout << "Queries(" << queries.size() << "):" << std::endl;
     for(unsigned int i = 0; i < queries.size(); i++){
-        std::cout << '\t';
+        std::cout << ' ' << ' ';
         queries[i]->predicateToString();
         std::cout << "?" << std::endl;
     }
@@ -30,10 +30,10 @@ void DatalogProgram::OneToStringToRuleThemAll(){
     std::cout << "Domain(" << Domain.size() << "):" << std::endl;
     for(auto it = Domain.begin(); it != Domain.end(); it++){
         if(std::next(it) == Domain.end()) {
-            std::cout << '\t' << *it;
+            std::cout << ' ' << ' ' << *it;
         }
         else{
-            std::cout << '\t' << *it << std::endl;
+            std::cout << ' ' << ' ' << *it << std::endl;
         }
     }
 }

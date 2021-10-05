@@ -13,7 +13,7 @@ void Parser::parse(std::vector<Token*> tokens) {
         datalog->OneToStringToRuleThemAll();
     }
     catch (Token* t){
-        std::cout << "Failure!";
+        std::cout << "Failure!" << std::endl;
         std::cout << '\t' << "(" << t->tokenTypeToString(t->getType()) << ",\"" << t->getDescription() << "\"," << t->getLine() << ")";
     }
 }
