@@ -13,7 +13,7 @@ void Parser::parse(std::vector<Token*> tokens) {
         datalog->OneToStringToRuleThemAll();
     }
     catch (Token* t){
-        std::cout << "Failure!" << std::endl;
+        std::cout << "Failure!";
         std::cout << '\t' << "(" << t->tokenTypeToString(t->getType()) << ",\"" << t->getDescription() << "\"," << t->getLine() << ")";
     }
 }
@@ -334,5 +334,8 @@ std::string Parser::match(TokenType type, std::vector<Token*> tokens) {
 void Parser::checkForComment(std::vector<Token*> tokens){
     if(tokens.at(index)->getType() == TokenType::COMMENT){
         index++;
+        if(tokens.at(index)->getType() == TokenType::COMMENT){
+            checkForComment(tokens);
+        }
     }
 }

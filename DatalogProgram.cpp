@@ -29,7 +29,12 @@ void DatalogProgram::OneToStringToRuleThemAll(){
     creatDomain();
     std::cout << "Domain(" << Domain.size() << "):" << std::endl;
     for(auto it = Domain.begin(); it != Domain.end(); it++){
-        std::cout << '\t' << *it << std::endl;
+        if(std::next(it) == Domain.end()) {
+            std::cout << '\t' << *it;
+        }
+        else{
+            std::cout << '\t' << *it << std::endl;
+        }
     }
 }
 void DatalogProgram::creatDomain() {
