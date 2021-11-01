@@ -20,3 +20,9 @@ std::vector<std::string> Predicate::getFactStrings() {
     }
     return temp;
 }
+std::string Predicate::getID() {
+    return ID;
+}
+std::vector<Parameter*> Predicate::getParameters() {
+    return parameters;
+}

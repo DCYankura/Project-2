@@ -46,3 +46,16 @@ void DatalogProgram::creatDomain() {
         }
     }
 }
+
+std::vector<Predicate*> DatalogProgram::getSchemes() {
+    return schemes;
+}
+std::vector<Predicate*> DatalogProgram::getFacts(){
+    return facts;
+}
+std::vector<Predicate*> DatalogProgram::getQueries(){
+    return  queries;
+}
+std::vector<Rule*> DatalogProgram::getRules(){
+    return rules;
+}

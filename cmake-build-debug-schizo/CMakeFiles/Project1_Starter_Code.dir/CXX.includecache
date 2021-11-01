@@ -6,23 +6,41 @@
 
 #IncludeRegexTransform: 
 
-/users/guest/d/dcy2016/project-1/Automaton.h
-utility
--
-Token.h
-/users/guest/d/dcy2016/project-1/Token.h
+/users/guest/d/dcy2016/project-1/Database.cpp
+Database.h
+/users/guest/d/dcy2016/project-1/Database.h
 
-/users/guest/d/dcy2016/project-1/Token.h
+/users/guest/d/dcy2016/project-1/Database.h
+Relation.h
+/users/guest/d/dcy2016/project-1/Relation.h
+map
+-
+
+/users/guest/d/dcy2016/project-1/Header.h
+vector
+-
 string
 -
-iostream
+
+/users/guest/d/dcy2016/project-1/Relation.cpp
+Relation.h
+/users/guest/d/dcy2016/project-1/Relation.h
+
+/users/guest/d/dcy2016/project-1/Relation.h
+Tuple.h
+/users/guest/d/dcy2016/project-1/Tuple.h
+Header.h
+/users/guest/d/dcy2016/project-1/Header.h
+vector
+-
+string
+-
+set
 -
 
-/users/guest/d/dcy2016/project-1/UndefinedCommentAutomaton.cpp
-UndefinedCommentAutomaton.h
-/users/guest/d/dcy2016/project-1/UndefinedCommentAutomaton.h
-
-/users/guest/d/dcy2016/project-1/UndefinedCommentAutomaton.h
-Automaton.h
-/users/guest/d/dcy2016/project-1/Automaton.h
+/users/guest/d/dcy2016/project-1/Tuple.h
+vector
+-
+string
+-
 

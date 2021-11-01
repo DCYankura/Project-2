@@ -56,6 +56,10 @@ public:
 
     void OneToStringToRuleThemAll();
     void creatDomain();
+    std::vector<Predicate*> getSchemes();
+    std::vector<Predicate*> getFacts();
+    std::vector<Predicate*> getQueries();
+    std::vector<Rule*> getRules();
 };
 
 

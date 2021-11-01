@@ -369,6 +369,97 @@ CMakeFiles/Project1_Starter_Code.dir/Predicate.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project1_Starter_Code.dir/Predicate.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/d/dcy2016/project-1/Predicate.cpp -o CMakeFiles/Project1_Starter_Code.dir/Predicate.s
 
+CMakeFiles/Project1_Starter_Code.dir/Parameter.o: CMakeFiles/Project1_Starter_Code.dir/flags.make
+CMakeFiles/Project1_Starter_Code.dir/Parameter.o: ../Parameter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/Project1_Starter_Code.dir/Parameter.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project1_Starter_Code.dir/Parameter.o -c /users/guest/d/dcy2016/project-1/Parameter.cpp
+
+CMakeFiles/Project1_Starter_Code.dir/Parameter.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project1_Starter_Code.dir/Parameter.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/d/dcy2016/project-1/Parameter.cpp > CMakeFiles/Project1_Starter_Code.dir/Parameter.i
+
+CMakeFiles/Project1_Starter_Code.dir/Parameter.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project1_Starter_Code.dir/Parameter.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/d/dcy2016/project-1/Parameter.cpp -o CMakeFiles/Project1_Starter_Code.dir/Parameter.s
+
+CMakeFiles/Project1_Starter_Code.dir/Parser.o: CMakeFiles/Project1_Starter_Code.dir/flags.make
+CMakeFiles/Project1_Starter_Code.dir/Parser.o: ../Parser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/Project1_Starter_Code.dir/Parser.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project1_Starter_Code.dir/Parser.o -c /users/guest/d/dcy2016/project-1/Parser.cpp
+
+CMakeFiles/Project1_Starter_Code.dir/Parser.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project1_Starter_Code.dir/Parser.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/d/dcy2016/project-1/Parser.cpp > CMakeFiles/Project1_Starter_Code.dir/Parser.i
+
+CMakeFiles/Project1_Starter_Code.dir/Parser.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project1_Starter_Code.dir/Parser.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/d/dcy2016/project-1/Parser.cpp -o CMakeFiles/Project1_Starter_Code.dir/Parser.s
+
+CMakeFiles/Project1_Starter_Code.dir/Database.o: CMakeFiles/Project1_Starter_Code.dir/flags.make
+CMakeFiles/Project1_Starter_Code.dir/Database.o: ../Database.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/Project1_Starter_Code.dir/Database.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project1_Starter_Code.dir/Database.o -c /users/guest/d/dcy2016/project-1/Database.cpp
+
+CMakeFiles/Project1_Starter_Code.dir/Database.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project1_Starter_Code.dir/Database.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/d/dcy2016/project-1/Database.cpp > CMakeFiles/Project1_Starter_Code.dir/Database.i
+
+CMakeFiles/Project1_Starter_Code.dir/Database.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project1_Starter_Code.dir/Database.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/d/dcy2016/project-1/Database.cpp -o CMakeFiles/Project1_Starter_Code.dir/Database.s
+
+CMakeFiles/Project1_Starter_Code.dir/Relation.o: CMakeFiles/Project1_Starter_Code.dir/flags.make
+CMakeFiles/Project1_Starter_Code.dir/Relation.o: ../Relation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/Project1_Starter_Code.dir/Relation.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project1_Starter_Code.dir/Relation.o -c /users/guest/d/dcy2016/project-1/Relation.cpp
+
+CMakeFiles/Project1_Starter_Code.dir/Relation.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project1_Starter_Code.dir/Relation.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/d/dcy2016/project-1/Relation.cpp > CMakeFiles/Project1_Starter_Code.dir/Relation.i
+
+CMakeFiles/Project1_Starter_Code.dir/Relation.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project1_Starter_Code.dir/Relation.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/d/dcy2016/project-1/Relation.cpp -o CMakeFiles/Project1_Starter_Code.dir/Relation.s
+
+CMakeFiles/Project1_Starter_Code.dir/Header.o: CMakeFiles/Project1_Starter_Code.dir/flags.make
+CMakeFiles/Project1_Starter_Code.dir/Header.o: ../Header.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/Project1_Starter_Code.dir/Header.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project1_Starter_Code.dir/Header.o -c /users/guest/d/dcy2016/project-1/Header.cpp
+
+CMakeFiles/Project1_Starter_Code.dir/Header.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project1_Starter_Code.dir/Header.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/d/dcy2016/project-1/Header.cpp > CMakeFiles/Project1_Starter_Code.dir/Header.i
+
+CMakeFiles/Project1_Starter_Code.dir/Header.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project1_Starter_Code.dir/Header.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/d/dcy2016/project-1/Header.cpp -o CMakeFiles/Project1_Starter_Code.dir/Header.s
+
+CMakeFiles/Project1_Starter_Code.dir/Tuple.o: CMakeFiles/Project1_Starter_Code.dir/flags.make
+CMakeFiles/Project1_Starter_Code.dir/Tuple.o: ../Tuple.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/Project1_Starter_Code.dir/Tuple.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project1_Starter_Code.dir/Tuple.o -c /users/guest/d/dcy2016/project-1/Tuple.cpp
+
+CMakeFiles/Project1_Starter_Code.dir/Tuple.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project1_Starter_Code.dir/Tuple.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/d/dcy2016/project-1/Tuple.cpp > CMakeFiles/Project1_Starter_Code.dir/Tuple.i
+
+CMakeFiles/Project1_Starter_Code.dir/Tuple.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project1_Starter_Code.dir/Tuple.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/d/dcy2016/project-1/Tuple.cpp -o CMakeFiles/Project1_Starter_Code.dir/Tuple.s
+
+CMakeFiles/Project1_Starter_Code.dir/Interpreter.o: CMakeFiles/Project1_Starter_Code.dir/flags.make
+CMakeFiles/Project1_Starter_Code.dir/Interpreter.o: ../Interpreter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/Project1_Starter_Code.dir/Interpreter.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project1_Starter_Code.dir/Interpreter.o -c /users/guest/d/dcy2016/project-1/Interpreter.cpp
+
+CMakeFiles/Project1_Starter_Code.dir/Interpreter.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project1_Starter_Code.dir/Interpreter.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/d/dcy2016/project-1/Interpreter.cpp > CMakeFiles/Project1_Starter_Code.dir/Interpreter.i
+
+CMakeFiles/Project1_Starter_Code.dir/Interpreter.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project1_Starter_Code.dir/Interpreter.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/d/dcy2016/project-1/Interpreter.cpp -o CMakeFiles/Project1_Starter_Code.dir/Interpreter.s
+
 # Object files for target Project1_Starter_Code
 Project1_Starter_Code_OBJECTS = \
 "CMakeFiles/Project1_Starter_Code.dir/ColonAutomaton.o" \
@@ -394,7 +485,14 @@ Project1_Starter_Code_OBJECTS = \
 "CMakeFiles/Project1_Starter_Code.dir/UndefinedCommentAutomaton.o" \
 "CMakeFiles/Project1_Starter_Code.dir/DatalogProgram.o" \
 "CMakeFiles/Project1_Starter_Code.dir/Rule.o" \
-"CMakeFiles/Project1_Starter_Code.dir/Predicate.o"
+"CMakeFiles/Project1_Starter_Code.dir/Predicate.o" \
+"CMakeFiles/Project1_Starter_Code.dir/Parameter.o" \
+"CMakeFiles/Project1_Starter_Code.dir/Parser.o" \
+"CMakeFiles/Project1_Starter_Code.dir/Database.o" \
+"CMakeFiles/Project1_Starter_Code.dir/Relation.o" \
+"CMakeFiles/Project1_Starter_Code.dir/Header.o" \
+"CMakeFiles/Project1_Starter_Code.dir/Tuple.o" \
+"CMakeFiles/Project1_Starter_Code.dir/Interpreter.o"
 
 # External object files for target Project1_Starter_Code
 Project1_Starter_Code_EXTERNAL_OBJECTS =
@@ -423,9 +521,16 @@ Project1_Starter_Code: CMakeFiles/Project1_Starter_Code.dir/UndefinedCommentAuto
 Project1_Starter_Code: CMakeFiles/Project1_Starter_Code.dir/DatalogProgram.o
 Project1_Starter_Code: CMakeFiles/Project1_Starter_Code.dir/Rule.o
 Project1_Starter_Code: CMakeFiles/Project1_Starter_Code.dir/Predicate.o
+Project1_Starter_Code: CMakeFiles/Project1_Starter_Code.dir/Parameter.o
+Project1_Starter_Code: CMakeFiles/Project1_Starter_Code.dir/Parser.o
+Project1_Starter_Code: CMakeFiles/Project1_Starter_Code.dir/Database.o
+Project1_Starter_Code: CMakeFiles/Project1_Starter_Code.dir/Relation.o
+Project1_Starter_Code: CMakeFiles/Project1_Starter_Code.dir/Header.o
+Project1_Starter_Code: CMakeFiles/Project1_Starter_Code.dir/Tuple.o
+Project1_Starter_Code: CMakeFiles/Project1_Starter_Code.dir/Interpreter.o
 Project1_Starter_Code: CMakeFiles/Project1_Starter_Code.dir/build.make
 Project1_Starter_Code: CMakeFiles/Project1_Starter_Code.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Linking CXX executable Project1_Starter_Code"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/users/guest/d/dcy2016/project-1/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Linking CXX executable Project1_Starter_Code"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Project1_Starter_Code.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

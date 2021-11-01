@@ -15,6 +15,8 @@ public:
     Predicate() {}
     void predicateToString();
     std::vector<std::string> getFactStrings();
+    std::string getID();
+    std::vector<Parameter*> getParameters();
 
 };
 

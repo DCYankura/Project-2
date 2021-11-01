@@ -117,6 +117,12 @@
 		<Unit filename="/users/guest/d/dcy2016/project-1/CommentAutomaton.h">
 			<Option target="Project1_Starter_Code"/>
 		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/Database.cpp">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/Database.h">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
 		<Unit filename="/users/guest/d/dcy2016/project-1/DatalogProgram.cpp">
 			<Option target="Project1_Starter_Code"/>
 		</Unit>
@@ -129,10 +135,22 @@
 		<Unit filename="/users/guest/d/dcy2016/project-1/FactsAutomaton.h">
 			<Option target="Project1_Starter_Code"/>
 		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/Header.cpp">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/Header.h">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
 		<Unit filename="/users/guest/d/dcy2016/project-1/IDAutomaton.cpp">
 			<Option target="Project1_Starter_Code"/>
 		</Unit>
 		<Unit filename="/users/guest/d/dcy2016/project-1/IDAutomaton.h">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/Interpreter.cpp">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/Interpreter.h">
 			<Option target="Project1_Starter_Code"/>
 		</Unit>
 		<Unit filename="/users/guest/d/dcy2016/project-1/LeftParenAutomaton.cpp">
@@ -151,6 +169,18 @@
 			<Option target="Project1_Starter_Code"/>
 		</Unit>
 		<Unit filename="/users/guest/d/dcy2016/project-1/MultiplyAutomaton.h">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/Parameter.cpp">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/Parameter.h">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/Parser.cpp">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/Parser.h">
 			<Option target="Project1_Starter_Code"/>
 		</Unit>
 		<Unit filename="/users/guest/d/dcy2016/project-1/PeriodAutomaton.cpp">
@@ -175,6 +205,12 @@
 			<Option target="Project1_Starter_Code"/>
 		</Unit>
 		<Unit filename="/users/guest/d/dcy2016/project-1/QueriesAutomaton.h">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/Relation.cpp">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/Relation.h">
 			<Option target="Project1_Starter_Code"/>
 		</Unit>
 		<Unit filename="/users/guest/d/dcy2016/project-1/RightParenAutomaton.cpp">
@@ -211,6 +247,12 @@
 			<Option target="Project1_Starter_Code"/>
 		</Unit>
 		<Unit filename="/users/guest/d/dcy2016/project-1/Token.h">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/Tuple.cpp">
+			<Option target="Project1_Starter_Code"/>
+		</Unit>
+		<Unit filename="/users/guest/d/dcy2016/project-1/Tuple.h">
 			<Option target="Project1_Starter_Code"/>
 		</Unit>
 		<Unit filename="/users/guest/d/dcy2016/project-1/UndefinedCommentAutomaton.cpp">

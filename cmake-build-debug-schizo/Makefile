@@ -199,6 +199,21 @@ CommentAutomaton.s:
 .PHONY : CommentAutomaton.s
 
 # target to build an object file
+Database.o:
+	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/Database.o
+.PHONY : Database.o
+
+# target to preprocess a source file
+Database.i:
+	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/Database.i
+.PHONY : Database.i
+
+# target to generate assembly for a file
+Database.s:
+	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/Database.s
+.PHONY : Database.s
+
+# target to build an object file
 DatalogProgram.o:
 	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/DatalogProgram.o
 .PHONY : DatalogProgram.o
@@ -229,6 +244,21 @@ FactsAutomaton.s:
 .PHONY : FactsAutomaton.s
 
 # target to build an object file
+Header.o:
+	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/Header.o
+.PHONY : Header.o
+
+# target to preprocess a source file
+Header.i:
+	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/Header.i
+.PHONY : Header.i
+
+# target to generate assembly for a file
+Header.s:
+	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/Header.s
+.PHONY : Header.s
+
+# target to build an object file
 IDAutomaton.o:
 	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/IDAutomaton.o
 .PHONY : IDAutomaton.o
@@ -242,6 +272,21 @@ IDAutomaton.i:
 IDAutomaton.s:
 	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/IDAutomaton.s
 .PHONY : IDAutomaton.s
+
+# target to build an object file
+Interpreter.o:
+	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/Interpreter.o
+.PHONY : Interpreter.o
+
+# target to preprocess a source file
+Interpreter.i:
+	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/Interpreter.i
+.PHONY : Interpreter.i
+
+# target to generate assembly for a file
+Interpreter.s:
+	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/Interpreter.s
+.PHONY : Interpreter.s
 
 # target to build an object file
 LeftParenAutomaton.o:
@@ -287,6 +332,36 @@ MultiplyAutomaton.i:
 MultiplyAutomaton.s:
 	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/MultiplyAutomaton.s
 .PHONY : MultiplyAutomaton.s
+
+# target to build an object file
+Parameter.o:
+	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/Parameter.o
+.PHONY : Parameter.o
+
+# target to preprocess a source file
+Parameter.i:
+	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/Parameter.i
+.PHONY : Parameter.i
+
+# target to generate assembly for a file
+Parameter.s:
+	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/Parameter.s
+.PHONY : Parameter.s
+
+# target to build an object file
+Parser.o:
+	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/Parser.o
+.PHONY : Parser.o
+
+# target to preprocess a source file
+Parser.i:
+	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/Parser.i
+.PHONY : Parser.i
+
+# target to generate assembly for a file
+Parser.s:
+	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/Parser.s
+.PHONY : Parser.s
 
 # target to build an object file
 PeriodAutomaton.o:
@@ -347,6 +422,21 @@ QueriesAutomaton.i:
 QueriesAutomaton.s:
 	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/QueriesAutomaton.s
 .PHONY : QueriesAutomaton.s
+
+# target to build an object file
+Relation.o:
+	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/Relation.o
+.PHONY : Relation.o
+
+# target to preprocess a source file
+Relation.i:
+	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/Relation.i
+.PHONY : Relation.i
+
+# target to generate assembly for a file
+Relation.s:
+	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/Relation.s
+.PHONY : Relation.s
 
 # target to build an object file
 RightParenAutomaton.o:
@@ -439,6 +529,21 @@ Token.s:
 .PHONY : Token.s
 
 # target to build an object file
+Tuple.o:
+	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/Tuple.o
+.PHONY : Tuple.o
+
+# target to preprocess a source file
+Tuple.i:
+	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/Tuple.i
+.PHONY : Tuple.i
+
+# target to generate assembly for a file
+Tuple.s:
+	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/Tuple.s
+.PHONY : Tuple.s
+
+# target to build an object file
 UndefinedCommentAutomaton.o:
 	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/UndefinedCommentAutomaton.o
 .PHONY : UndefinedCommentAutomaton.o
@@ -507,15 +612,24 @@ help:
 	@echo "... CommentAutomaton.o"
 	@echo "... CommentAutomaton.i"
 	@echo "... CommentAutomaton.s"
+	@echo "... Database.o"
+	@echo "... Database.i"
+	@echo "... Database.s"
 	@echo "... DatalogProgram.o"
 	@echo "... DatalogProgram.i"
 	@echo "... DatalogProgram.s"
 	@echo "... FactsAutomaton.o"
 	@echo "... FactsAutomaton.i"
 	@echo "... FactsAutomaton.s"
+	@echo "... Header.o"
+	@echo "... Header.i"
+	@echo "... Header.s"
 	@echo "... IDAutomaton.o"
 	@echo "... IDAutomaton.i"
 	@echo "... IDAutomaton.s"
+	@echo "... Interpreter.o"
+	@echo "... Interpreter.i"
+	@echo "... Interpreter.s"
 	@echo "... LeftParenAutomaton.o"
 	@echo "... LeftParenAutomaton.i"
 	@echo "... LeftParenAutomaton.s"
@@ -525,6 +639,12 @@ help:
 	@echo "... MultiplyAutomaton.o"
 	@echo "... MultiplyAutomaton.i"
 	@echo "... MultiplyAutomaton.s"
+	@echo "... Parameter.o"
+	@echo "... Parameter.i"
+	@echo "... Parameter.s"
+	@echo "... Parser.o"
+	@echo "... Parser.i"
+	@echo "... Parser.s"
 	@echo "... PeriodAutomaton.o"
 	@echo "... PeriodAutomaton.i"
 	@echo "... PeriodAutomaton.s"
@@ -537,6 +657,9 @@ help:
 	@echo "... QueriesAutomaton.o"
 	@echo "... QueriesAutomaton.i"
 	@echo "... QueriesAutomaton.s"
+	@echo "... Relation.o"
+	@echo "... Relation.i"
+	@echo "... Relation.s"
 	@echo "... RightParenAutomaton.o"
 	@echo "... RightParenAutomaton.i"
 	@echo "... RightParenAutomaton.s"
@@ -555,6 +678,9 @@ help:
 	@echo "... Token.o"
 	@echo "... Token.i"
 	@echo "... Token.s"
+	@echo "... Tuple.o"
+	@echo "... Tuple.i"
+	@echo "... Tuple.s"
 	@echo "... UndefinedCommentAutomaton.o"
 	@echo "... UndefinedCommentAutomaton.i"
 	@echo "... UndefinedCommentAutomaton.s"
