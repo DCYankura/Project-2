@@ -57,6 +57,7 @@ Relation* Interpreter::evaluateQuery(Predicate &q) {
     std::vector<std::string> variables;
     std::vector<int> constIndices;
     std::vector<int> varIndices;
+    std::vector<int> projectIndices;
     bool repeat = false;
     //std::set<Tuple> newTuples;
     for(unsigned int i = 0; i < param.size(); i++){
@@ -69,18 +70,15 @@ Relation* Interpreter::evaluateQuery(Predicate &q) {
         }
         else{
             variables.push_back(temp);
-            //varIndices.push_back(i);
-
+            varIndices.push_back(i);
             for(unsigned int j = 0; j < varIndices.size(); j++){
                 if(temp == variables[j] && j != i){
                     repeat = true;
                 }
             }
             if(!repeat) {
-                varIndices.push_back(i);
+                projectIndices.push_back(i);
             }
-
-
         }
     }
     for(unsigned int i = 0; i < constants.size(); i++){
@@ -89,9 +87,9 @@ Relation* Interpreter::evaluateQuery(Predicate &q) {
         r = r->select(constIndices[i],constants[i]);
     }
     //select for each pair of matching variables in 'q'
-    if(varIndices.size() > 1) {
-        for (unsigned int i = 0; i < varIndices.size(); i++) {
-            for (unsigned int j = 0; j < varIndices.size(); j++){
+    if(variables.size() > 1) {
+        for (unsigned int i = 0; i < variables.size(); i++) {
+            for (unsigned int j = 0; j < variables.size(); j++){
                 if(variables[i]==variables[j] && i != j){
                     r = r->select(varIndices[i],varIndices[j]);
                 }
@@ -102,7 +100,7 @@ Relation* Interpreter::evaluateQuery(Predicate &q) {
     //project using the positions of the variables in 'q'
     //std::vector<int> varIndicesVec;
     //std::copy(varIndices.begin(), varIndices.end(), std::back_inserter(varIndicesVec));
-    r = r->project(varIndices);
+    r = r->project(projectIndices);
     //rename to match the names of the variables in 'q'
     r = r->rename(variables);
     std::cout << queryName << "(";
