@@ -69,14 +69,18 @@ Relation* Interpreter::evaluateQuery(Predicate &q) {
         }
         else{
             variables.push_back(temp);
+            //varIndices.push_back(i);
+
             for(unsigned int j = 0; j < varIndices.size(); j++){
                 if(temp == variables[j] && j != i){
                     repeat = true;
                 }
             }
-            if(repeat == false) {
+            if(!repeat) {
                 varIndices.push_back(i);
             }
+
+
         }
     }
     for(unsigned int i = 0; i < constants.size(); i++){
@@ -85,11 +89,11 @@ Relation* Interpreter::evaluateQuery(Predicate &q) {
         r = r->select(constIndices[i],constants[i]);
     }
     //select for each pair of matching variables in 'q'
-    if(variables.size() > 1) {
-        for (unsigned int i = 0; i < variables.size() - 1; i++) {
-            for (unsigned int j = 1; j < variables.size(); j++){
-                if(variables[i]==variables[j]){
-                    r = r->select(i,j);
+    if(varIndices.size() > 1) {
+        for (unsigned int i = 0; i < varIndices.size(); i++) {
+            for (unsigned int j = 0; j < varIndices.size(); j++){
+                if(variables[i]==variables[j] && i != j){
+                    r = r->select(varIndices[i],varIndices[j]);
                 }
             }
         }

@@ -1,11 +1,16 @@
+# COPYRIGHT © BRIGHAM YOUNG UNIVERSITY CS 236
+# FOR USE ONLY DURING SUMMER 2021 SEMESTER
 Schemes:
-  SK(A,B)
+   childOf(A,B)
+   marriedTo(A,B)
+   siblings(W,X,Y,Z)
+
 Facts:
-  SK('a','c').
-  SK('b','c').
-  SK('b','b').
-  SK('b','c').
+   siblings('Tod','Tod','George Foreman','Tod').
+
 Rules:
+   childOf(X,Y):-childOf(X,Z),marriedTo(Y,Z).
+   marriedTo(X,Y):-marriedTo(Y,X).
 
 Queries:
-  SK(A,'c')?
+   siblings(A,C,'George Foreman',A)?

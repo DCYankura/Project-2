@@ -32,6 +32,8 @@ Relation* Relation::select(int column1, int column2) {
     for(it = tuples.begin(); it != tuples.end(); it++){
         Tuple tupleIter = *it;
         std::vector<std::string> tempValues = tupleIter.getValues();
+        std::string test1 = tempValues[column1];
+        std::string test2 = tempValues[column2];
         if(tempValues[column1] == tempValues[column2]) {
             newTuples.insert(*it);
         }
