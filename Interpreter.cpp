@@ -55,6 +55,7 @@ Relation* Interpreter::evaluateQuery(Predicate &q) {
     //select for each constant in query 'q'
     std::vector<std::string> constants;
     std::vector<std::string> variables;
+    std::vector<std::string> varNoRepeats;
     std::vector<int> constIndices;
     std::vector<int> varIndices;
     //std::set<Tuple> newTuples;
@@ -76,6 +77,7 @@ Relation* Interpreter::evaluateQuery(Predicate &q) {
             }
             if(!repeat) {
                 varIndices.push_back(i);
+                varNoRepeats.push_back(temp);
             }
         }
     }
@@ -102,7 +104,7 @@ Relation* Interpreter::evaluateQuery(Predicate &q) {
     //std::copy(varIndices.begin(), varIndices.end(), std::back_inserter(varIndicesVec));
     r = r->project(varIndices);
     //rename to match the names of the variables in 'q'
-    r = r->rename(variables);
+    r = r->rename(varNoRepeats);
     std::cout << queryName << "(";
     for(unsigned int i = 0; i < paramStrings.size(); i++){
         if(i == paramStrings.size()-1){
