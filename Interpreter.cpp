@@ -57,11 +57,11 @@ Relation* Interpreter::evaluateQuery(Predicate &q) {
     std::vector<std::string> variables;
     std::vector<int> constIndices;
     std::vector<int> varIndices;
-    bool repeat = false;
     //std::set<Tuple> newTuples;
     for(unsigned int i = 0; i < param.size(); i++){
         std::string temp = param[i]->parameterToSting();
         paramStrings.push_back(temp);
+        bool repeat = false;
         if(temp[0] == '\''){
             //std::cout << "this is temp[0] " << temp[0] << " !!!!!" << std::endl;
             constants.push_back(temp);
