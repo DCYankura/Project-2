@@ -28,6 +28,7 @@ private:
     std::vector<Parameter*> stringListVector;
     std::vector<Parameter*> IDListVector;
 public:
+    DatalogProgram parse();
     DatalogProgram parse(std::vector<Token*>);
 
     DatalogProgram* parseDatalogProgram(std::vector<Token*>);

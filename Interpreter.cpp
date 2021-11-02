@@ -9,12 +9,12 @@ Interpreter::Interpreter(DatalogProgram datalogProgram) {
     std::vector<Predicate*> f = datalogProgram.getFacts();
     std::vector<Predicate*> q = datalogProgram.getQueries();
     std::vector<Relation*> relationVector;
-    for(int i = 0; i < s.size(); i++){
+    for(unsigned int i = 0; i < s.size(); i++){
         Relation* newRelation = new Relation();
         std::string schemeName = s[i]->getID();
         std::vector<Parameter*> schemeParam = s[i]->getParameters();
         std::vector<std::string> schemeAttribute;
-        for(int j = 0; j < schemeParam.size(); j++){
+        for(unsigned int j = 0; j < schemeParam.size(); j++){
             schemeAttribute.push_back(schemeParam[j]->parameterToSting());
         }
         Header* newHeader = new Header(schemeAttribute);
@@ -22,12 +22,12 @@ Interpreter::Interpreter(DatalogProgram datalogProgram) {
         newRelation->setName(schemeName);
         //relationVector.push_back(newRelation);
         //add straight to database
-        for(int k = 0; k < f.size(); k++){
+        for(unsigned int k = 0; k < f.size(); k++){
             std::string factName = f[k]->getID();
             if(factName == schemeName) {
                 std::vector<Parameter *> factParam = f[k]->getParameters();
                 std::vector<std::string> factAttributes;
-                for (int l = 0; l < factParam.size(); l++) {
+                for (unsigned int l = 0; l < factParam.size(); l++) {
                     factAttributes.push_back(factParam[l]->parameterToSting());
                 }
                 Tuple newTuple = Tuple(factAttributes);
@@ -37,7 +37,7 @@ Interpreter::Interpreter(DatalogProgram datalogProgram) {
         //add relation to db
         db.addRelation(schemeName, newRelation);
     }
-    for(int i = 0; i < q.size(); i++){
+    for(unsigned int i = 0; i < q.size(); i++){
         //get relation 'r' with same name as query 'q'
         Predicate tempPredicate = *q[i];
         Relation* r = evaluateQuery(tempPredicate);
@@ -59,7 +59,7 @@ Relation* Interpreter::evaluateQuery(Predicate &q) {
     std::vector<int> varIndices;
     bool repeat = false;
     //std::set<Tuple> newTuples;
-    for(int i = 0; i < param.size(); i++){
+    for(unsigned int i = 0; i < param.size(); i++){
         std::string temp = param[i]->parameterToSting();
         paramStrings.push_back(temp);
         if(temp[0] == '\''){
@@ -69,7 +69,7 @@ Relation* Interpreter::evaluateQuery(Predicate &q) {
         }
         else{
             variables.push_back(temp);
-            for(int j = 0; j < varIndices.size(); j++){
+            for(unsigned int j = 0; j < varIndices.size(); j++){
                 if(temp == variables[j] && j != i){
                     repeat = true;
                 }
@@ -79,15 +79,15 @@ Relation* Interpreter::evaluateQuery(Predicate &q) {
             }
         }
     }
-    for(int i = 0; i < constants.size(); i++){
+    for(unsigned int i = 0; i < constants.size(); i++){
         //std::cout << "this is the index: " << constIndices[i] << std::endl;
         //std::cout << "this is the constant: " << constants[i] << std::endl;
         r = r->select(constIndices[i],constants[i]);
     }
     //select for each pair of matching variables in 'q'
     if(variables.size() > 1) {
-        for (int i = 0; i < variables.size() - 1; i++) {
-            for (int j = 1; j < variables.size(); j++){
+        for (unsigned int i = 0; i < variables.size() - 1; i++) {
+            for (unsigned int j = 1; j < variables.size(); j++){
                 if(variables[i]==variables[j]){
                     r = r->select(i,j);
                 }
@@ -102,7 +102,7 @@ Relation* Interpreter::evaluateQuery(Predicate &q) {
     //rename to match the names of the variables in 'q'
     r = r->rename(variables);
     std::cout << queryName << "(";
-    for(int i = 0; i < paramStrings.size(); i++){
+    for(unsigned int i = 0; i < paramStrings.size(); i++){
         if(i == paramStrings.size()-1){
             std::cout << paramStrings[i] << ")? ";
         }

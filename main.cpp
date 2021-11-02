@@ -25,6 +25,7 @@ int main(__attribute__((unused)) int argc, char** argv) {
     datalogProgram = parser->parse(tokens);
     auto* interpreter = new Interpreter(datalogProgram);
     //interpreter evaluate all queries
+    delete interpreter;
     delete lexer;
 
     return 0;

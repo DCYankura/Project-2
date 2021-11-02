@@ -7,6 +7,7 @@
 //objects for each class
 DatalogProgram Parser::parse(std::vector<Token*> tokens) {
     //return datalog object from parser
+    DatalogProgram emptyDatalog = DatalogProgram();
     try {
         //auto* datalog = new DatalogProgram();
         DatalogProgram* datalog = parseDatalogProgram(tokens);
@@ -19,6 +20,7 @@ DatalogProgram Parser::parse(std::vector<Token*> tokens) {
         std::cout << "Failure!" << std::endl;
         std::cout << '\t' << "(" << t->tokenTypeToString(t->getType()) << ",\"" << t->getDescription() << "\"," << t->getLine() << ")";
     }
+    return emptyDatalog;
 }
 
 DatalogProgram*  Parser::parseDatalogProgram(std::vector<Token*> tokens){

@@ -11,7 +11,7 @@ Relation* Relation::select(int index, std::string value){
     //std::vector<std::string> newHeaders;
     //std::vector<std::string> attributes = headers->getAttributes();
     std::set<Tuple>::iterator it;
-    int tupleSize = tuples.size();
+    //int tupleSize = tuples.size();
     for(it = tuples.begin(); it != tuples.end(); it++){
         Tuple tupleIter = *it;
         std::vector<std::string> tempValues = tupleIter.getValues();
@@ -95,7 +95,7 @@ void Relation::relationToString() {
             if(values.size() != 0) {
                 std::cout << " " << " ";
             }
-            for(int j = 0; j < values.size(); j++) {
+            for(unsigned int j = 0; j < values.size(); j++) {
                 if(j == values.size()- 1) {
                     std::cout << attributes[j] << "=" << values[j] << std::endl;
                 }
