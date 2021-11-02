@@ -11,6 +11,7 @@ Relation* Relation::select(int index, std::string value){
     //std::vector<std::string> newHeaders;
     //std::vector<std::string> attributes = headers->getAttributes();
     std::set<Tuple>::iterator it;
+    int tupleSize = tuples.size();
     for(it = tuples.begin(); it != tuples.end(); it++){
         Tuple tupleIter = *it;
         std::vector<std::string> tempValues = tupleIter.getValues();
@@ -69,4 +70,39 @@ Relation* Relation::rename(std::vector<std::string> newAttributes) {
     Header* tempHeader =new Header(newAttributes);
     Relation* newRelation = new Relation(tuples, name, tempHeader);
     return newRelation;
+}
+
+void Relation::relationToString() {
+    //std::cout << name << "(";
+    std::vector<std::string> attributes = headers->getAttributes();
+    /*
+    for(int i = 0; i < attributes.size(); i++){
+        if(i == attributes.size() - 1){
+            std::cout << attributes[i] << ")? ";
+        }
+        else{
+            std::cout << attributes[i] << ",";
+        }
+    }
+    */
+    if(tuples.size() == 0){
+        std::cout << "No" << std::endl;
+    }
+    else{
+        std::cout << "Yes(" << tuples.size() << ")" << std::endl;
+        for(Tuple t : tuples){
+            std::vector<std::string> values = t.getValues();
+            if(values.size() != 0) {
+                std::cout << " " << " ";
+            }
+            for(int j = 0; j < values.size(); j++) {
+                if(j == values.size()- 1) {
+                    std::cout << attributes[j] << "=" << values[j] << std::endl;
+                }
+                else{
+                    std::cout << attributes[j] << "=" << values[j] << ", ";
+                }
+            }
+        }
+    }
 }

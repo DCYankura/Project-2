@@ -10,9 +10,13 @@
 //#include "Predicate.h"
 
 class Interpreter {
+private:
+    Database db;
 public:
-    void Interpret(DatalogProgram datalogProgram, Database database);
-    Relation* evaluatePredicate(const Predicate& p);
+    //Interpreter(){}
+    Interpreter(DatalogProgram datalogProgram);
+    Relation* evaluateQuery(Predicate& p);
+    //in constructor build database
 };
 
 

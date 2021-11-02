@@ -28,7 +28,7 @@ private:
     std::vector<Parameter*> stringListVector;
     std::vector<Parameter*> IDListVector;
 public:
-    void parse(std::vector<Token*>);
+    DatalogProgram parse(std::vector<Token*>);
 
     DatalogProgram* parseDatalogProgram(std::vector<Token*>);
 
@@ -38,7 +38,6 @@ public:
     std::vector<Predicate*> parseQueryList(std::vector<Token*>); //return list of predicates
     Predicate* parseScheme(std::vector<Token*>); //push schemeList onto datalog object
     Predicate* parseFact(std::vector<Token*>);
-
     Rule* parseRule(std::vector<Token*>);
 
     Predicate* parseQuery(std::vector<Token*>);

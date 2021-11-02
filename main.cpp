@@ -2,6 +2,7 @@
 #include <fstream>
 #include "Lexer.h"
 #include "Parser.h"
+#include "Interpreter.h"
 
 using namespace std;
 
@@ -20,7 +21,10 @@ int main(__attribute__((unused)) int argc, char** argv) {
 
     lexer->Run(input);
     std::vector<Token*> tokens = lexer->ReturnTokens();
-    parser->parse(tokens);
+    DatalogProgram datalogProgram = DatalogProgram();
+    datalogProgram = parser->parse(tokens);
+    auto* interpreter = new Interpreter(datalogProgram);
+    //interpreter evaluate all queries
     delete lexer;
 
     return 0;

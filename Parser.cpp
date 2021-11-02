@@ -5,12 +5,15 @@
 #include "Parser.h"
 
 //objects for each class
-void Parser::parse(std::vector<Token*> tokens) {
+DatalogProgram Parser::parse(std::vector<Token*> tokens) {
+    //return datalog object from parser
     try {
         //auto* datalog = new DatalogProgram();
         DatalogProgram* datalog = parseDatalogProgram(tokens);
-        std::cout << "Success!" << std::endl;
-        datalog->OneToStringToRuleThemAll();
+        //std::cout << "Success!" << std::endl;
+        //interpreter->Interpret()
+        //datalog->OneToStringToRuleThemAll();
+        return *datalog;
     }
     catch (Token* t){
         std::cout << "Failure!" << std::endl;

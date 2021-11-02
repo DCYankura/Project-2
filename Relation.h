@@ -10,6 +10,7 @@
 #include <vector>
 #include <string>
 #include <set>
+#include <iostream>
 
 class Relation
 {
@@ -42,6 +43,7 @@ public:
     void setHeader(Header* headers){
         this->headers = headers;
     }
+    void relationToString();
 };
 
 
