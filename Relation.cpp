@@ -216,7 +216,8 @@ Tuple Relation::combineTuple(Tuple tuple1, Tuple tuple2, std::vector<int> indice
     for(unsigned int i = 0; i < valuesT2.size(); i++){
         isMatch = false;
         for(unsigned int j = 0; j < indicesT2.size(); j++){
-            if(i == indicesT2[j]){
+            int temp = i;
+            if(temp == indicesT2[j]){
                 isMatch = true;
             }
         }
