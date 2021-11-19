@@ -81,8 +81,8 @@ Relation* Relation::join(Relation* relationToJoin) {
     std::vector<std::string> attributesR2 = header2->getAttributes();
     std::vector<int> indicesH1;
     std::vector<int> indicesH2;
-    for(int i = 0; i < attributesR1.size(); i++){
-        for(int j = 0; j < attributesR2.size(); j++){
+    for(unsigned int i = 0; i < attributesR1.size(); i++){
+        for(unsigned int j = 0; j < attributesR2.size(); j++){
             if(attributesR1[i] == attributesR2[j]){
                 indicesH1.push_back(i);
                 indicesH2.push_back(j);
@@ -165,9 +165,9 @@ Header* Relation::combineHeaders(Header *header1, Header *header2) {
     std::vector<std::string> attributesH2 = header2->getAttributes();
     std::vector<std::string> newAttributes = attributesH1;
     bool isRepeat;
-    for(int i = 0; i < attributesH2.size(); i++){
+    for(unsigned int i = 0; i < attributesH2.size(); i++){
         isRepeat = false;
-        for(int j = 0; j < attributesH1.size(); j++){
+        for(unsigned int j = 0; j < attributesH1.size(); j++){
             if(attributesH1[j] == attributesH2[i]){
                 isRepeat = true;
             }
@@ -184,7 +184,7 @@ bool Relation::isJoinable(Tuple tuple1, Tuple tuple2, std::vector<int> indicesT1
     bool joinable = true;
     std::vector<std::string> valuesT1 = tuple1.getValues();
     std::vector<std::string> valuesT2 = tuple2.getValues();
-    for(int i = 0; i <indicesT1.size(); i++){
+    for(unsigned int i = 0; i <indicesT1.size(); i++){
         int indexT1 = indicesT1[i];
         int indexT2 = indicesT2[i];
         if(valuesT1[indexT1] != valuesT2[indexT2]){
@@ -213,9 +213,9 @@ Tuple Relation::combineTuple(Tuple tuple1, Tuple tuple2, std::vector<int> indice
     }
      */
     bool isMatch;
-    for(int i = 0; i < valuesT2.size(); i++){
+    for(unsigned int i = 0; i < valuesT2.size(); i++){
         isMatch = false;
-        for(int j = 0; j < indicesT2.size(); j++){
+        for(unsigned int j = 0; j < indicesT2.size(); j++){
             if(i == indicesT2[j]){
                 isMatch = true;
             }

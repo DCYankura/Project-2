@@ -96,7 +96,7 @@ std::pair<Relation*, bool> Interpreter::evaluateRule(Rule* rule) {
     //Relation* relationToReturn = new Relation();
     //step 1: evaluate predicates on right-hand side of rules
     std::vector<Predicate*> predicateList = rule->getPredicateList();
-    for(int j = 0; j < predicateList.size(); j++){
+    for(unsigned int j = 0; j < predicateList.size(); j++){
         //evaluate rules using evaluateQuery function and add them to vector
         Relation* ruleRelation = evaluatePredicate(*predicateList[j]);
         relationList.push_back(ruleRelation);
@@ -104,7 +104,7 @@ std::pair<Relation*, bool> Interpreter::evaluateRule(Rule* rule) {
     //step 2: Join relations in relationList
     Relation* tempRelation = relationList[0];
     if(relationList.size() > 0){
-        for(int k = 1; k < relationList.size(); k++){
+        for(unsigned int k = 1; k < relationList.size(); k++){
             tempRelation = tempRelation->join(relationList[k]);
         }
     }
@@ -114,8 +114,8 @@ std::pair<Relation*, bool> Interpreter::evaluateRule(Rule* rule) {
     Header* tempRelationHeader = tempRelation->getHeaders();
     std::vector<std::string> tempRelationValues = tempRelationHeader->getAttributes();
     std::vector<int> headPredicateIndices;
-    for(int k = 0; k < tempHeadParam.size(); k++){
-        for(int l = 0; l < tempRelationValues.size(); l++){
+    for(unsigned int k = 0; k < tempHeadParam.size(); k++){
+        for(unsigned int l = 0; l < tempRelationValues.size(); l++){
             if(tempHeadParam[k]->parameterToSting() == tempRelationValues[l]){
                 headPredicateIndices.push_back(l);
             }
