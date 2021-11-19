@@ -13,6 +13,12 @@ public:
     Rule() {}
     //virtual ~Rule() = default;
     void ruleToString();
+    Predicate* getHeadPredicate(){
+        return headPredicate;
+    }
+    std::vector<Predicate*> getPredicateList(){
+        return predicateList;
+    }
 };
 
 

@@ -25,11 +25,19 @@ public:
     Relation* select(int column1, int column2);
     Relation* project(std::vector<int> indices);
     Relation* rename(std::vector<std::string> newAttributes);
+    Relation* join(Relation* relationToJoin);
+    Header* combineHeaders(Header* header1, Header* header2);
+    bool isJoinable(Tuple tuple1, Tuple tuple2, std::vector<int> indicesT1, std::vector<int> indicesT2);
+    Tuple combineTuple(Tuple tuple1, Tuple tuple2, std::vector<int> indicesT1, std::vector<int> indicesT2);
+    bool unionize(Relation* &relationToJoin);
     std::string getName(){
         return name;
     }
-    std::set<Tuple> getTuples(){
+    std::set<Tuple> &getTuples(){
         return tuples;
+    }
+    Header* getHeaders(){
+        return headers;
     }
     void addTuple(Tuple newTuple){
         tuples.insert(newTuple);

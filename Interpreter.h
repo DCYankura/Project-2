@@ -16,6 +16,8 @@ public:
     //Interpreter(){}
     Interpreter(DatalogProgram datalogProgram);
     Relation* evaluateQuery(Predicate& p);
+    std::pair<Relation*, bool> evaluateRule(Rule* rule);
+    Relation* evaluatePredicate(Predicate& p);
     //in constructor build database
 };
 
