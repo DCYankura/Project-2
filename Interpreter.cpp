@@ -37,14 +37,67 @@ Interpreter::Interpreter(DatalogProgram datalogProgram) {
         //add relation to db
         db.addRelation(schemeName, newRelation);
     }
-    //evaluate rules
+    //create forward and reverse graphs, and find SCCs
     std::vector<Rule*> daRules = datalogProgram.getRules();
-    Relation* ruleRelation = new Relation();
+    createForwardGraph(daRules);
+    createReverseGraph(daRules);
+    forwardGraph->GraphToString();
+    //reverseGraph->GraphToString();
+    DFSFReverse(nodeRules);
+    std::vector<int> postOrder = postorderStack;
+    std::reverse(postOrder.begin(), postOrder.end());
+    DFSFForward(postOrder);
+    //evaluate rules
+    //Relation* ruleRelation = new Relation();
     std::cout << "Rule Evaluation" << std::endl;
     bool repeat = true;
-    std::pair<Relation*, bool> rulePair = std::make_pair(ruleRelation, repeat);
-    int counter = 0;
-    while(repeat) {
+    //std::pair<Relation*, bool> rulePair = std::make_pair(ruleRelation, repeat);
+    for(unsigned int i = 0; i < SCCs.size(); i++) {
+        std::vector<int> tempSCC = SCCs[i];
+        std::set<int> SCCInts = {};
+        for(unsigned int j = 0; j < tempSCC.size(); j++){
+            SCCInts.insert(tempSCC[j]);
+        }
+        counter = 0;
+        bool trivial = true;
+        repeat = true;
+        for(int j = 0; j < tempSCC.size(); j++){
+            if(!nodeRules[tempSCC[j]]->isTrivial()){
+                trivial = false;
+            }
+        }
+        std::cout << "SCC: ";
+        int index = 0;
+        for (auto it : SCCInts){
+            if(index == tempSCC.size()-1) {
+                std::cout << "R" << it << std::endl;
+            }
+            else{
+                std::cout << "R" << it << ",";
+            }
+            index++;
+        }
+        if(SCCs[i].size() > 1 || !trivial) {
+            while(repeat) {
+                repeat = evaluateSCCs(daRules, repeat, tempSCC);
+            }
+        }
+        else{
+            evaluateSCCs(daRules, repeat, tempSCC);
+        }
+        std::cout << counter << " passes: ";
+        index = 0;
+        for (auto it : SCCInts){
+            if(index == tempSCC.size()-1) {
+                std::cout << "R" << it << std::endl;
+            }
+            else{
+                std::cout << "R" << it << ",";
+            }
+            index++;
+        }
+    }
+        /*
         repeat = false;
         for (unsigned int i = 0; i < daRules.size(); i++) {
             daRules[i]->ruleToString();
@@ -61,26 +114,11 @@ Interpreter::Interpreter(DatalogProgram datalogProgram) {
             std::vector<std::string> attributes = ruleHeaders->getAttributes();
             std::set<Tuple> tupleSet = ruleRelation->getTuples();
             std::set<Tuple>::iterator it;
-            /*
-            for(it = tupleSet.begin(); it != tupleSet.end(); it++){
-                std::cout << '\t';
-                Tuple tempTuple = *it;
-                std::vector<std::string> tupleValues = tempTuple.getValues();
-                for(unsigned int j = 0; j < attributes.size(); j++){
-                    if(j == attributes.size()-1) {
-                        std::cout << attributes[j] << "=" << tupleValues[j] << std::endl;
-                    }
-                    else{
-                        std::cout << attributes[j] << "=" << tupleValues[j] << ", ";
-                    }
-                }
-            }
-             */
         }
         counter++;
-    }
-    std::cout << std::endl << "Schemes populated after " << counter << " passes through the Rules." << std::endl << std::endl;
-    std::cout << "Query Evaluation" << std::endl;
+         */
+    //std::cout << std::endl << "Schemes populated after " << counter << " passes through the Rules." << std::endl << std::endl;
+    std::cout << std::endl << "Query Evaluation" << std::endl;
     for(unsigned int i = 0; i < q.size(); i++){
         //get relation 'r' with same name as query 'q'
         Predicate tempPredicate = *q[i];
@@ -88,6 +126,171 @@ Interpreter::Interpreter(DatalogProgram datalogProgram) {
         //print the resulting relation
         r->relationToString();
     }
+}
+
+bool Interpreter::evaluateSCCs(std::vector<Rule *> daRules, bool repeat, std::vector<int> tempSCC){
+    repeat = false;
+    for(unsigned int i = 0; i < tempSCC.size(); i++) {
+        int index = tempSCC[i];
+        /*
+        bool trivial = false;
+        std::set<Node*> dependencies = forwardGraph->getDependecyMap()[index];
+        std::string head = daRules[index]->getHeadPredicate()->getID();
+        for(auto it : dependencies){
+            std::string predicateID = daRules[it*]
+            if()
+        }
+         */
+        daRules[index]->ruleToString();
+        std::cout << "." << std::endl;
+        std::pair<Relation*, bool> rulePair = evaluateRule(daRules[index]);
+        Relation* ruleRelation = new Relation();
+        ruleRelation = rulePair.first;
+        bool repeatTemp = rulePair.second;
+        if(!repeat){
+            repeat = repeatTemp;
+        }
+        std::string nameToMatch = ruleRelation->getName();
+        //(db.getMap())[nameToMatch] = ruleRelation;
+        Header *ruleHeaders = ruleRelation->getHeaders();
+        std::vector<std::string> attributes = ruleHeaders->getAttributes();
+        std::set<Tuple> tupleSet = ruleRelation->getTuples();
+        //std::set<Tuple>::iterator it;
+    }
+    counter++;
+    return repeat;
+}
+
+void Interpreter::createForwardGraph(std::vector<Rule*> ruleList) {
+    this->forwardGraph = new Graph();
+    //std::vector<Node*> nodeList;
+    for(unsigned int i = 0; i < ruleList.size(); i++){
+        Node* newNode = new Node(i, false, true);
+        nodeRules.push_back(newNode);
+    }
+    //Graph* newGraph = new Graph();
+    //std::map<int, std::set<Node*>> newMap = newGraph->getMap();
+
+    /*
+    for(int i = 0; i < ruleList.size(); i++){
+        std::string headName = ruleList[i]->getHeadPredicate()->getID();
+        //Node* newNode = new Node(i, false);
+        std::set<Node*> dependencySet = {};
+        for(int j = 0; j < ruleList.size(); j++){
+            for(int k = 0; k < ruleList[j]->getPredicateList().size(); k++){
+                std::string predicateName = ruleList[j]->getPredicateList()[k]->getID();
+                if(predicateName == headName){
+                    dependencySet.insert(nodeList[j]);
+                }
+            }
+        }
+        forwardGraph->addToMap(dependencySet);
+    }
+     */
+
+    for(unsigned int i = 0; i < ruleList.size(); i++){
+        std::set<Node*> dependencySet = {};
+        for(unsigned int k = 0; k < ruleList[i]->getPredicateList().size(); k++){
+            std::string headName = ruleList[i]->getPredicateList()[k]->getID();
+            for(unsigned int j = 0; j < ruleList.size(); j++){
+                std::string predicateName = ruleList[j]->getHeadPredicate()->getID();
+                if(headName == predicateName){
+                    dependencySet.insert(nodeRules[j]);
+                }
+            }
+        }
+        forwardGraph->addToMap(dependencySet);
+    }
+}
+
+void Interpreter::createReverseGraph(std::vector<Rule*> ruleList) {
+    this->reverseGraph = new Graph();
+    //Graph* newGraph = new Graph();
+    //std::map<int, std::set<Node*>> newMap = newGraph->getMap();
+    //std::vector<Node*> nodeList;
+    /*
+    for(int i = 0; i < ruleList.size(); i++){
+        Node* newNode = new Node(i, false);
+        nodeList.push_back(newNode);
+    }
+     */
+    for(unsigned int i = 0; i < ruleList.size(); i++){
+        std::string headName = ruleList[i]->getHeadPredicate()->getID();
+        std::set<Node*> dependencySet = {};
+        for(unsigned int j = 0; j < ruleList.size(); j++){
+            for(unsigned int k = 0; k < ruleList[j]->getPredicateList().size(); k++){
+                std::string predicateName = ruleList[j]->getPredicateList()[k]->getID();
+                if(predicateName == headName){
+                    dependencySet.insert(nodeRules[j]);
+                    if(i==j){
+                        nodeRules[i]->notTrivial();
+                    }
+                }
+            }
+        }
+        reverseGraph->addToMap(dependencySet);
+    }
+}
+
+void Interpreter::DFSreverse(int startingNode) {
+    nodeRules[startingNode]->visitNode();
+    std::set<Node*> adjacencyList = reverseGraph->getDependecyMap()[startingNode];
+    std::vector<Node*> adjacencyVector;
+    for(auto it : adjacencyList){
+        adjacencyVector.push_back(it);
+    }
+    for(unsigned int i = 0; i < adjacencyVector.size(); i++){
+        if(!adjacencyVector[i]->wasVisited()){
+            int nodeToVisit = adjacencyVector[i]->getRuleNumber();
+            DFSreverse(nodeToVisit);
+            //postorderStack.push_back(startingNode);
+        }
+    }
+    postorderStack.push_back(startingNode);
+    //SCC.insert(startingNode);
+}
+
+void Interpreter::DFSforward(int startingNode) {
+    nodeRules[startingNode]->visitNode();
+    std::set<Node*> adjacencyList = forwardGraph->getDependecyMap()[startingNode];
+    std::vector<Node*> adjacencyVector;
+    for(auto it : adjacencyList){
+        adjacencyVector.push_back(it);
+    }
+    for(unsigned int i = 0; i < adjacencyVector.size(); i++){
+        if(!adjacencyVector[i]->wasVisited()){
+            int nodeToVisit = adjacencyVector[i]->getRuleNumber();
+            DFSforward(nodeToVisit);
+            //postorderStack.push_back(startingNode);
+        }
+    }
+    //postorderStack.push_back(startingNode);
+    SCC.push_back(startingNode);
+}
+
+void Interpreter::DFSFReverse(std::vector<Node*> ruleNodes) {
+    //Need to loop through reverse graph.
+    for(unsigned int i = 0; i < ruleNodes.size(); i++){
+        if(!ruleNodes[i]->wasVisited()){
+            DFSreverse(i);
+        }
+    }
+}
+
+void Interpreter::DFSFForward(std::vector<int> order) {
+    //SCCs = {};
+    //SCC = {};
+    for(unsigned int i = 0; i < nodeRules.size(); i++){
+        nodeRules[i]->unVisit();
+    }
+    for(unsigned int i = 0; i < order.size(); i++){
+        if(!nodeRules[order[i]]->wasVisited()){
+            DFSforward(order[i]);
+            SCCs.push_back(SCC);
+            SCC = {};
+        }
+    }
+    //SCC = {};
 }
 
 std::pair<Relation*, bool> Interpreter::evaluateRule(Rule* rule) {
@@ -290,6 +493,13 @@ Relation* Interpreter::evaluatePredicate(Predicate& q) {
     r = r->rename(varNoRepeats);
     return r;
 }
+
+
+
+
+
+
+
 /*
 std::cout << "this is a test" << std::endl;
 for(int i = 0; i < q.size(); i++){

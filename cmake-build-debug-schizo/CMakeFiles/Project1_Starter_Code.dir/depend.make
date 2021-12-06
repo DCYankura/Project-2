@@ -51,6 +51,17 @@ CMakeFiles/Project1_Starter_Code.dir/IDAutomaton.o: ../IDAutomaton.cpp
 CMakeFiles/Project1_Starter_Code.dir/IDAutomaton.o: ../IDAutomaton.h
 CMakeFiles/Project1_Starter_Code.dir/IDAutomaton.o: ../Token.h
 
+CMakeFiles/Project1_Starter_Code.dir/Interpreter.o: ../Database.h
+CMakeFiles/Project1_Starter_Code.dir/Interpreter.o: ../DatalogProgram.h
+CMakeFiles/Project1_Starter_Code.dir/Interpreter.o: ../Header.h
+CMakeFiles/Project1_Starter_Code.dir/Interpreter.o: ../Interpreter.cpp
+CMakeFiles/Project1_Starter_Code.dir/Interpreter.o: ../Interpreter.h
+CMakeFiles/Project1_Starter_Code.dir/Interpreter.o: ../Parameter.h
+CMakeFiles/Project1_Starter_Code.dir/Interpreter.o: ../Predicate.h
+CMakeFiles/Project1_Starter_Code.dir/Interpreter.o: ../Relation.h
+CMakeFiles/Project1_Starter_Code.dir/Interpreter.o: ../Rule.h
+CMakeFiles/Project1_Starter_Code.dir/Interpreter.o: ../Tuple.h
+
 CMakeFiles/Project1_Starter_Code.dir/LeftParenAutomaton.o: ../Automaton.h
 CMakeFiles/Project1_Starter_Code.dir/LeftParenAutomaton.o: ../LeftParenAutomaton.cpp
 CMakeFiles/Project1_Starter_Code.dir/LeftParenAutomaton.o: ../LeftParenAutomaton.h
@@ -163,12 +174,17 @@ CMakeFiles/Project1_Starter_Code.dir/UndefinedStringAutomaton.o: ../UndefinedStr
 CMakeFiles/Project1_Starter_Code.dir/UndefinedStringAutomaton.o: ../UndefinedStringAutomaton.h
 
 CMakeFiles/Project1_Starter_Code.dir/main.o: ../Automaton.h
+CMakeFiles/Project1_Starter_Code.dir/main.o: ../Database.h
 CMakeFiles/Project1_Starter_Code.dir/main.o: ../DatalogProgram.h
+CMakeFiles/Project1_Starter_Code.dir/main.o: ../Header.h
+CMakeFiles/Project1_Starter_Code.dir/main.o: ../Interpreter.h
 CMakeFiles/Project1_Starter_Code.dir/main.o: ../Lexer.h
 CMakeFiles/Project1_Starter_Code.dir/main.o: ../Parameter.h
 CMakeFiles/Project1_Starter_Code.dir/main.o: ../Parser.h
 CMakeFiles/Project1_Starter_Code.dir/main.o: ../Predicate.h
+CMakeFiles/Project1_Starter_Code.dir/main.o: ../Relation.h
 CMakeFiles/Project1_Starter_Code.dir/main.o: ../Rule.h
 CMakeFiles/Project1_Starter_Code.dir/main.o: ../Token.h
+CMakeFiles/Project1_Starter_Code.dir/main.o: ../Tuple.h
 CMakeFiles/Project1_Starter_Code.dir/main.o: ../main.cpp
 

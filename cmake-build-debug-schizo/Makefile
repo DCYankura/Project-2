@@ -244,6 +244,21 @@ FactsAutomaton.s:
 .PHONY : FactsAutomaton.s
 
 # target to build an object file
+Graph.o:
+	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/Graph.o
+.PHONY : Graph.o
+
+# target to preprocess a source file
+Graph.i:
+	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/Graph.i
+.PHONY : Graph.i
+
+# target to generate assembly for a file
+Graph.s:
+	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/Graph.s
+.PHONY : Graph.s
+
+# target to build an object file
 Header.o:
 	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/Header.o
 .PHONY : Header.o
@@ -332,6 +347,21 @@ MultiplyAutomaton.i:
 MultiplyAutomaton.s:
 	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/MultiplyAutomaton.s
 .PHONY : MultiplyAutomaton.s
+
+# target to build an object file
+Node.o:
+	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/Node.o
+.PHONY : Node.o
+
+# target to preprocess a source file
+Node.i:
+	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/Node.i
+.PHONY : Node.i
+
+# target to generate assembly for a file
+Node.s:
+	$(MAKE) -f CMakeFiles/Project1_Starter_Code.dir/build.make CMakeFiles/Project1_Starter_Code.dir/Node.s
+.PHONY : Node.s
 
 # target to build an object file
 Parameter.o:
@@ -621,6 +651,9 @@ help:
 	@echo "... FactsAutomaton.o"
 	@echo "... FactsAutomaton.i"
 	@echo "... FactsAutomaton.s"
+	@echo "... Graph.o"
+	@echo "... Graph.i"
+	@echo "... Graph.s"
 	@echo "... Header.o"
 	@echo "... Header.i"
 	@echo "... Header.s"
@@ -639,6 +672,9 @@ help:
 	@echo "... MultiplyAutomaton.o"
 	@echo "... MultiplyAutomaton.i"
 	@echo "... MultiplyAutomaton.s"
+	@echo "... Node.o"
+	@echo "... Node.i"
+	@echo "... Node.s"
 	@echo "... Parameter.o"
 	@echo "... Parameter.i"
 	@echo "... Parameter.s"
