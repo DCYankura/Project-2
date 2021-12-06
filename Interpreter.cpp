@@ -61,7 +61,7 @@ Interpreter::Interpreter(DatalogProgram datalogProgram) {
         counter = 0;
         bool trivial = true;
         repeat = true;
-        for(int j = 0; j < tempSCC.size(); j++){
+        for(unsigned int j = 0; j < tempSCC.size(); j++){
             if(!nodeRules[tempSCC[j]]->isTrivial()){
                 trivial = false;
             }
@@ -69,7 +69,7 @@ Interpreter::Interpreter(DatalogProgram datalogProgram) {
         std::cout << "SCC: ";
         int index = 0;
         for (auto it : SCCInts){
-            if(index == tempSCC.size()-1) {
+            if(index == ((unsigned int)tempSCC.size()-1)) {
                 std::cout << "R" << it << std::endl;
             }
             else{
@@ -88,7 +88,7 @@ Interpreter::Interpreter(DatalogProgram datalogProgram) {
         std::cout << counter << " passes: ";
         index = 0;
         for (auto it : SCCInts){
-            if(index == tempSCC.size()-1) {
+            if(index == ((unsigned int)tempSCC.size()-1)) {
                 std::cout << "R" << it << std::endl;
             }
             else{
