@@ -33,4 +33,5 @@ void Graph::GraphToString() {
             }
         }
     }
+    std::cout << std::endl;
 }
