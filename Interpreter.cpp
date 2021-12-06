@@ -132,8 +132,12 @@ Interpreter::Interpreter(DatalogProgram datalogProgram) {
 
 bool Interpreter::evaluateSCCs(std::vector<Rule *> daRules, bool repeat, std::vector<int> tempSCC){
     repeat = false;
-    for(unsigned int i = 0; i < tempSCC.size(); i++) {
-        int index = tempSCC[i];
+    std::set<int> tempSetSCC;
+    for(unsigned int i = 0; i < tempSCC.size(); i++){
+        tempSetSCC.insert(tempSCC[i]);
+    }
+    for(auto it : tempSetSCC) {
+        int index = it;
         /*
         bool trivial = false;
         std::set<Node*> dependencies = forwardGraph->getDependecyMap()[index];
