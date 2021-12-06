@@ -23,7 +23,7 @@ void Graph::GraphToString() {
         }
         else {
             for(auto it: dependencyInts) {
-                unsigned int comparison = dependencyInts.size()-1;
+                int comparison = dependencyInts.size()-1;
                 if(k == comparison) {
                     std::cout << "R" << it << std::endl;
                 } else {

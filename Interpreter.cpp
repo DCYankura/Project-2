@@ -69,7 +69,7 @@ Interpreter::Interpreter(DatalogProgram datalogProgram) {
         std::cout << "SCC: ";
         int index = 0;
         for (auto it : SCCInts){
-            unsigned int comparison = tempSCC.size()-1;
+            int comparison = tempSCC.size()-1;
             if(index == comparison) {
                 std::cout << "R" << it << std::endl;
             }
@@ -89,7 +89,7 @@ Interpreter::Interpreter(DatalogProgram datalogProgram) {
         std::cout << counter << " passes: ";
         index = 0;
         for (auto it : SCCInts){
-            unsigned int comparison = tempSCC.size()-1;
+            int comparison = tempSCC.size()-1;
             if(index == comparison) {
                 std::cout << "R" << it << std::endl;
             }
